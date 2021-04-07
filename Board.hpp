@@ -16,7 +16,7 @@ namespace ariel
         void resizeBoard(unsigned int row, unsigned int col, unsigned int length, Direction direction);
     public:
         Board();
-        void post(unsigned int row, unsigned int col, ariel::Direction direction, std::string content);
+        void post(unsigned int row, unsigned int col, ariel::Direction direction, std::string val);
         std::string read(unsigned int row, unsigned int col, ariel::Direction direction, unsigned int length);
         void show();
     };

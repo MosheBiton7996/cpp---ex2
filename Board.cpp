@@ -71,7 +71,20 @@ namespace ariel
 
 void Board::show()
     {
-    
+        cout << "********Message Board********"; // offset
+
+        // height and width of message are one char away from the message's edge.
+
+        unsigned int height = sumRows - firstRow + 2;
+        unsigned int width = sumCols - firstCol + 1;
+        unsigned int rowNumber = firstRow-1;
+
+        for (unsigned int i = 0; i < height; i++, rowNumber++)
+        {
+            cout << endl << rowNumber << ": " << "_"
+                  << read(firstRow-(unsigned int)1+i, firstCol, Direction::Horizontal, width);
+        }
+        cout << endl;
     }
     void Board::resizeBoard(unsigned int row, unsigned int col, unsigned int length, Direction direction)
     {
